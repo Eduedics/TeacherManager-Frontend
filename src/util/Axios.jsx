@@ -2,7 +2,7 @@ import axios from "axios";
 // creating connection to the backend api that automatically adds login token to every request
 
 const api = axios.create({
-  baseURL: "http://localhost:8000/api/",
+  baseURL: "https://teachersdutyattendancemanager.onrender.com/",
 });
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
