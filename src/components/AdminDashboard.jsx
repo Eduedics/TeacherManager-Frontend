@@ -150,7 +150,7 @@ const AdminDashboard = () => {
       fetchTeachers();
     } catch (err) {
       setErr("Failed to create a new teacher");
-      console.log('err', err);
+      console.log('err', err.response?.data || err);
     } finally {
       setLoading(false);
     }
